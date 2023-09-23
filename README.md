@@ -1,9 +1,34 @@
 # GraphQL
 GraphQL. A Query language for APIs. Fixed the over-fetching and under-fetching of data. Ask for what you need and get just you wanted.
 
+## Prerequisites
+  - Node version 13.14.0 and above.
+  - Package-2: `@apollo/server`
+  - Package-1: `grpahql`
 
-## Data-Source SCEMA
+## Installation
+  - ```
+    npm init --yes
+    ```
+  - ```
+    npm pck set type = "module"
+    ```
+  - ```
+    npm install @apollo/server  graphql
+    ```
+  - ```
+    npm start
+    ```
+  - Visit `http://localhost:4000` in your browser, which will open the Apollo Sandbox
 
+## File Structure
+  - src
+    - index.js
+    - schema-defs.js    (Define the graphQL query data structure that user/client can query)
+    - resolver-funs.js  (GraphQL Query functions. Resolvers tell Apollo Server how to fetch the data associated with a particular type)
+    - _data-source.js   (Data Source - Table Structure & Data)
+
+## Data-Source SCHEMA
 ### The trainers table stores information about the trainers.
 
     - id: The unique identifier for the trainer.
@@ -23,7 +48,7 @@ GraphQL. A Query language for APIs. Fixed the over-fetching and under-fetching o
     );
     ```
 
-# The pokemons table stores information about the pokemons.
+### The pokemons table stores information about the pokemons.
 
     - id: The unique identifier for the pokemon.
     - name: The name of the pokemon.
@@ -44,7 +69,7 @@ GraphQL. A Query language for APIs. Fixed the over-fetching and under-fetching o
     );
     ```
 
-# The competitions table stores information about the competitions.
+### The competitions table stores information about the competitions.
 
     - id: The unique identifier for the competition.
     - name: The name of the competition.
